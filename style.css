@@ -1,0 +1,20 @@
+/*
+Theme Name: Franny Hurt Designs
+Author: Mary Hipp
+Author URI: http://cobblehilldigital.com
+Version: 0.0.1
+*/
+
+*{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	
+}
+
+body, html {
+	padding:0;
+	margin: 0;
+}
+
+ul, li {	list-style: none; padding: 0;}

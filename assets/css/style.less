@@ -1,0 +1,104 @@
+////////////////////////////
+////// FONT VARIABLES ////// 
+////////////////////////////
+
+// .body-copy {	font: 400 normal 14px "effra"; letter-spacing: 1px;}
+
+
+
+////////////////////////////
+////// COLOR VARIABLES /////
+////////////////////////////
+
+// @primary: #CCCCCC;
+@primary;
+@link;
+@hover;
+@button;
+@input;
+
+
+////////////////////////////
+////// WIDTH VARIABLES /////
+////////////////////////////
+
+// change values according to design; max-width of overall content should be around 1600px
+.skinny-cont {	width: 60%; margin: 0 auto; max-width: 960px;}
+.mid-cont {	width: 85%; margin: 0 auto; max-width: 1360px;}
+
+
+////////////////////////////
+/////// MEDIA QUERIES //////
+////////////////////////////
+// change or add values according to design
+@tablet: ~"only screen and (max-width: 990px)";
+@phone: ~"only screen and (max-width: 630px)";
+
+.desktop {	display: block;
+	@media @tablet {display: none}
+}
+.mobile {	display: none;
+	@media @tablet {	display: block;}
+}
+
+////////////////////////////
+///// BROWSER MIXINS ///////
+////////////////////////////
+.transition(@transition) {-webkit-transition:@transition;-moz-transition:@transition;-ms-transition:@transition;-o-transition:@transition; }
+.transform(@string){transform:@string;-webkit-transform:@string;-moz-transform:@string;-ms-transform:@string;-o-transform:@string;}
+.transform-origin(@string) {-webkit-transform-origin:@string; -moz-transform-origin: @string; -ms-transform-origin: @string; transform-origin: @string;}
+.browser-appearance(@string) {-webkit-appearance: @string;-moz-appearance:@string;appearance:@string;}
+
+
+////////////////////////////
+//// LINKS & INPUTS ////////
+////////////////////////////
+a {	.transition(all 0.2s ease); text-decoration: none; color: inherit; cursor: pointer;
+	&:hover {	color: @hover;}
+}
+// class for links that should not use universal link styling (link blocks, etc)
+a.link-fix {	color: inherit; text-decoration: none;}
+
+.button, button, input[type="submit"] {	background: @button; padding: 15px 25px; color: white; text-decoration: none; border: 0; .transition(all 0.2s ease); cursor: pointer; .browser-appearance(none); border-radius: 0;
+	&:hover {	color: white; background: @hover;}
+}
+label {}
+
+input[type="text"], input[type="email"], input[type="password"],input[type="tel"], textarea, select {	.browser-appearance(none); border: 2px solid @primary; border-radius: 0; background: white; padding: 10px; resize: none; width: 100%; color: @primary}
+
+
+////////////////////////////
+//////// HEADINGS //////////
+////////////////////////////
+h1, .h1 { margin: 0;}
+h2, .h2 { margin: 0;}
+h3, .h3 { margin: 0;}
+h4, .h4 { margin: 0;}
+p { margin: 0;}
+
+
+////////////////////////////
+////////// NORMALIZE ///////////
+////////////////////////////
+body {	width: 100%; height: 100%; overflow-x: hidden;}
+body * {  box-sizing: border-box;}
+img {	max-width: 100%; height: auto;}
+table, .table {	border-collapse: collapse;}
+*:focus { border: 0;  outline:none;}
+select:focus {	border: initial;}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0; }
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] {-moz-appearance: textfield;}
+ul {	margin: 0;}
+.table {	display: table;}
+.table-cell {	display: table-cell; vertical-align: middle;}
+.row {	display: table-row;}
+.left {	display: left;}
+.right {	display: right;}
+.center {	display: center;}
+
+
+
+
+
+
